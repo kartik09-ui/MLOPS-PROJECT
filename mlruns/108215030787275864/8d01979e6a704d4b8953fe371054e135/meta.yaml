@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/ACER/OneDrive/Desktop/testing/mlruns/108215030787275864/8d01979e6a704d4b8953fe371054e135/artifacts
+end_time: 1739617935067
+entry_point_name: ''
+experiment_id: '108215030787275864'
+lifecycle_stage: active
+run_id: 8d01979e6a704d4b8953fe371054e135
+run_name: loud-fly-500
+run_uuid: 8d01979e6a704d4b8953fe371054e135
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739617906187
+status: 4
+tags: []
+user_id: ACER

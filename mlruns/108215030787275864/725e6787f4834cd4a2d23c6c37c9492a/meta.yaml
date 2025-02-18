@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/ACER/OneDrive/Desktop/testing/mlruns/108215030787275864/725e6787f4834cd4a2d23c6c37c9492a/artifacts
+end_time: 1739639093578
+entry_point_name: ''
+experiment_id: '108215030787275864'
+lifecycle_stage: active
+run_id: 725e6787f4834cd4a2d23c6c37c9492a
+run_name: unleashed-finch-465
+run_uuid: 725e6787f4834cd4a2d23c6c37c9492a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739639051397
+status: 3
+tags: []
+user_id: ACER

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/ACER/OneDrive/Desktop/testing/mlruns/108215030787275864/f204c512c94342d8a7c4ff7a015efcdf/artifacts
+end_time: 1739637284044
+entry_point_name: ''
+experiment_id: '108215030787275864'
+lifecycle_stage: active
+run_id: f204c512c94342d8a7c4ff7a015efcdf
+run_name: sneaky-dog-398
+run_uuid: f204c512c94342d8a7c4ff7a015efcdf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739637245465
+status: 3
+tags: []
+user_id: ACER

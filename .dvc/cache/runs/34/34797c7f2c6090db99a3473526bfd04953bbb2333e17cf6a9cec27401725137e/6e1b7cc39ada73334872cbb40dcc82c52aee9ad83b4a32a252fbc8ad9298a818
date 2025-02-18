@@ -1,0 +1,16 @@
+cmd: python src/model_training.py
+deps:
+- path: config/path_config.py
+  hash: md5
+  md5: 7eeac15618d4b80700fb3f21a17e223a
+  size: 743
+- path: src/model_training.py
+  hash: md5
+  md5: 686710a02828d1028f6a8a7503d2cc35
+  size: 4869
+outs:
+- path: artifacts/models
+  hash: md5
+  md5: d6ac4770ab25e6f652f8157f908f00cc.dir
+  size: 687540
+  nfiles: 1

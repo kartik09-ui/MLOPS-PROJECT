@@ -1,0 +1,78 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    background: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.9s;
+}
+
+button:hover {
+    background: #005f75;
+}
+
+/* Prediction Result Styling */
+h2 {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+h2[style*='color: aqua'] {
+    background-color: rgba(0, 255, 255, 0.2);
+}
+
+h2[style*='color: rgb(35, 112, 112)'] {
+    background-color: rgba(35, 112, 112, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}

@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: mlops_kar
+Version: 0.1
+Summary: MLOPS PROJECT
+Author: Kartik
+Requires-Python: >=3.7
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: setuptools
+Requires-Dist: mysql-connector-python
+Requires-Dist: pymysql
+Requires-Dist: scikit-learn
+Requires-Dist: lightgbm
+Requires-Dist: xgboost
+Requires-Dist: tensorboard
+Requires-Dist: torch
+Requires-Dist: matplotlib
+Requires-Dist: mlflow
+Requires-Dist: dvc
+Requires-Dist: flask
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

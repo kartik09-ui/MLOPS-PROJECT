@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/ACER/OneDrive/Desktop/testing/mlruns/108215030787275864/1c780a9ca2fb4f1a9c90cab5f1bc3f91/artifacts
+end_time: 1739618128353
+entry_point_name: ''
+experiment_id: '108215030787275864'
+lifecycle_stage: active
+run_id: 1c780a9ca2fb4f1a9c90cab5f1bc3f91
+run_name: big-kite-348
+run_uuid: 1c780a9ca2fb4f1a9c90cab5f1bc3f91
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739618080986
+status: 3
+tags: []
+user_id: ACER

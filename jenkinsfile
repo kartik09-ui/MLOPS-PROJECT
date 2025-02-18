@@ -4,6 +4,7 @@ pipeline {
     environment {
         VENV_DIR = 'venv'
     }
+
     stages {
         stage('Cloning from github repo') {
             steps {
@@ -15,37 +16,37 @@ pipeline {
         }
     }
 
-    stages {
-        stage('Setup Virtual Environment') {
-            steps {
-                script {
-                    echo 'Setup Virtual Environment......'
-                    sh '''
-                    python -m venv ${VENV_DIR}/bin/activate
-                    . ${VENV_DIR}
-                    pip install --upgrade pip
-                    pip install -e .
-                    '''
-                }
+    
+    stage('Setup Virtual Environment') {
+        steps {
+            script {
+                echo 'Setup Virtual Environment......'
+                sh '''
+                python -m venv ${VENV_DIR}/bin/activate
+                . ${VENV_DIR}
+                pip install --upgrade pip
+                pip install -e .
+                '''
+            }
+        }
+    }
+    
+
+     
+    stage('Linting Code') {
+        steps {
+            script {
+                echo 'Linting Code......'
+                sh'''
+                    set -e
+                    . ${VENV_DIR}/bin/activate
+
+                    pylint applicaation.py main.py --output=pylint-report.txt --exit-zero || echo "Pylint stage completed"
+                    flake8 applicaation.py main.py --ignore=E501,E302 --output-filr=flake8-report.txt || echo "Flake8 stage completed"
+                    black application.py main.py || echo "Black stage completed"
+                ''' 
             }
         }
     }
 
-     stages {
-        stage('Linting Code') {
-            steps {
-                script {
-                    echo 'Linting Code......'
-                    sh'''
-                        set -e
-                        . ${VENV_DIR}/bin/activate
-
-                        pylint applicaation.py main.py --output=pylint-report.txt --exit-zero || echo "Pylint stage completed"
-                        flake8 applicaation.py main.py --ignore=E501,E302 --output-filr=flake8-report.txt || echo "Flake8 stage completed"
-                        black application.py main.py || echo "Black stage completed"
-                    ''' 
-                }
-            }
-        }
-    }
 }

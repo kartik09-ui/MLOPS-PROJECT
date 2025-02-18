@@ -1,13 +1,49 @@
 pipeline {
     agent any
     
+    envoronment {
+        VENV_DIR = 'venv'
+    }
     stages {
         stage('Cloning from github repo') {
             steps {
                 script {
-                    //cloning github repo
-                    echo 'Cloning from github repo...'
-                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'mlops-github-token', url: 'https://github.com/kartik09-ui/MLOPS-PROJECT.git']])
+                    echo 'Cloning from github repo......'
+                    
+                }
+            }
+        }
+    }
+
+    stages {
+        stage('Setup Virtual Environment') {
+            steps {
+                script {
+                    echo 'Setup Virtual Environment......'
+                    sh '''
+                    python -m venv ${VENV_DIR}/bin/activate
+                    . ${VENV_DIR}
+                    pip install --upgrade pip
+                    pip install -e .
+                    '''
+                }
+            }
+        }
+    }
+
+     stages {
+        stage('Linting Code') {
+            steps {
+                script {
+                    echo 'Linting Code......'
+                    sh'''
+                        set -e
+                        . ${VENV_DIR}/bin/activate
+
+                        pylint applicaation.py main.py --output=pylint-report.txt --exit-zero || echo "Pylint stage completed"
+                        flake8 applicaation.py main.py --ignore=E501,E302 --output-filr=flake8-report.txt || echo "Flake8 stage completed"
+                        black application.py main.py || echo "Black stage completed"
+                    ''' 
                 }
             }
         }

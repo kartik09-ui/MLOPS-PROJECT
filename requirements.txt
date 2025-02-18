@@ -1,14 +1,12 @@
 pandas
 numpy
 setuptools
-mysql-connector-python
 pymysql
 scikit-learn
 lightgbm
-xgboost
-tensorboard
-torch
 matplotlib
 mlflow
-dvc
 flask
+pylint
+flake8
+black

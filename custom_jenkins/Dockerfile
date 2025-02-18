@@ -25,21 +25,3 @@ VOLUME /var/lib/docker
 USER jenkins
 
 ## remember 8080
-
-
-
-docker exec -u root -it jenkins-dind apt install -y python3
-docker exec -u root -it jenkins-dind python3 --version
-docker exec -u root -it jenkins-dind ln -s /usr/bin/python3 /usr/bin/python
-docker exec -u root -it jenkins-dind python --version
-docker exec -u root -it jenkins-dind apt install -y python3-pip
-docker exec -u root -it jenkins-dind apt install -y python3-venv
-
-
-
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/kartik09-ui/MLOPS-PROJECT.git
-git push -u origin main

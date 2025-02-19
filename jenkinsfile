@@ -21,8 +21,8 @@ pipeline {
                 script {
                     echo 'Setup Virtual Environment......'
                     sh '''
-                    python -m venv ${VENV_DIR}/bin/activate
-                    . ${VENV_DIR}
+                    python -m venv ${VENV_DIR}
+                    . ${VENV_DIR}/Script/activate
                     pip install --upgrade pip
                     pip install -e .
                     '''
@@ -36,10 +36,9 @@ pipeline {
                     echo 'Linting Code......'
                     sh'''
                         set -e
-                        . ${VENV_DIR}/bin/activate
-
-                        pylint applicaation.py main.py --output=pylint-report.txt --exit-zero || echo "Pylint stage completed"
-                        flake8 applicaation.py main.py --ignore=E501,E302 --output-filr=flake8-report.txt || echo "Flake8 stage completed"
+                        . ${VENV_DIR}/Scripts/activate
+                        pylint application.py main.py --output=pylint-report.txt --exit-zero || echo "Pylint stage completed"
+                        flake8 application.py main.py --ignore=E501,E302 --output-filr=flake8-report.txt || echo "Flake8 stage completed"
                         black application.py main.py || echo "Black stage completed"
                     ''' 
                 }
